@@ -60,6 +60,9 @@ function gameover() {
             for (let j = 0; j < winningCombo.length; j++) {
                 let winningIndex = winningCombo[j];
                 boxes[winningIndex].style.backgroundColor = 'green';
+                boxes.forEach((box,index) => {
+                    boxes[index].style.pointerEvents = 'none'
+                })
             }
 
             newgame.classList.add('active');
